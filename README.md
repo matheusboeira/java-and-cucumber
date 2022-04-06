@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Projeto de Testes - Silver Bullet
 
 Antes de prosseguir para a execução dos testes, será necessário o uso de alguma IDE disponível no mercado. Desta forma, aconselha-se a utilizar uma das seguintes IDE's: 
@@ -25,3 +27,5 @@ O plugin _**Cucumber for Groovy**_ é opcional, visto que não afeta diretamente
 ### Eclipse 
 
 No Eclipse, o único plugin necessário será o _**Cucumber Eclipse Plugin**_ que poderá ser instalado no _marketplace_ da ferramenta.
+  
+</div>
