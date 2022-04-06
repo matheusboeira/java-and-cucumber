@@ -13,10 +13,10 @@ LoginPage:
   btnSendPasswordForgotPassword: ""
   btnCreateAccount: ""
 ProjectPage:
+  lblUsername: "/html/body/header/nav/div/ul/li[2]/a/span"
   btnOpen: ""
   btnEdit: ""
   btnAddMember: ""
   btnExportOverleaf: ""
 DashboardPage:
   btnTeste: "..."
-

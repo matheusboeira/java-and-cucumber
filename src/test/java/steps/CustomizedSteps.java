@@ -7,11 +7,14 @@ import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CustomizedSteps {
     private static WebDriver driver;
@@ -54,6 +57,16 @@ public class CustomizedSteps {
     }
 
     /**
+     * Method responsible for placing, in order to minimize lines, the user's wrong
+     * credentials located in the repository file.
+     */
+    @When("^the user puts invalid credentials")
+    public static synchronized void invalidCredentials() {
+        putIn(Property.get("user"), "LoginPage.txtEmail");
+        putIn("password_wrong", "LoginPage.txtPassword");
+    }
+
+    /**
      * Method responsible to click in a button already mapped
      * on repository file.
      *
@@ -68,6 +81,15 @@ public class CustomizedSteps {
             System.err.println("Impossible to find the element. Please, check it out. Error: " + e.getMessage());
             System.exit(0);
         }
+    }
+
+    /**
+     * Method responsible to verify if the user logged matches as expected.
+     */
+    @Then("^the system verifies if the user matches \"(.*)\" on \"(.*)\"$")
+    public static synchronized void userMatches(String username, String element) {
+        String expected = getText(element);
+        assertEquals(expected, username);
     }
 
     /**
@@ -101,5 +123,22 @@ public class CustomizedSteps {
     @And("^the user quits the browser")
     public static synchronized void quits() {
         driver.quit();
+    }
+
+    @Then("^the system will send an error \"(.*)\" on \"(.*)\"$")
+    public static synchronized void error(String error, String element) {
+        String expected = getText(element).strip();
+        assertEquals(expected, error);
+    }
+
+    /**
+     * Method responsible to get the text of an element
+     * already registered on repository file.
+     *
+     * @param element the element already registered in your
+     *                repository.
+     */
+    public static String getText(String element) {
+        return driver.findElement(By.xpath(Repository.getElement(element))).getText();
     }
 }
