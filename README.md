@@ -53,3 +53,11 @@ Para exemplificar, segue a imagem abaixo:
 Onde "LoginPage" é a página, "txtEmail" é um text-field desta página e o que está entre aspas duplas (") é o elemento em _xpath_. Assim se dá nas restantes, onde "ProjectPage" é uma página, "btnOpen" é um botão desta página e a referência para esse botão (para o Selenium) está mapeado entre as aspas duplas ("), que neste caso está vazio.
 
 ## Features/Cenários
+
+Os cenários serão desenvolvidos utilizando a linguagem _Gherkin_ e utilizando a extensão _.feature_. Desta forma, os cenários serão feitos através de uma linguagem natural vinculada a um método. Para uma melhor exemplificação, segue a imagem abaixo seguida de sua explicação:
+
+![Cenário Exemplo](https://user-images.githubusercontent.com/76896958/161890299-0c1faafd-04c5-47e9-ab25-433b4bac1998.png)
+
+Neste caso, foi mostrado apenas um exemplo simples e com apenas um cenário. Para o arquivo completo: ![clique aqui.]()
+
+
