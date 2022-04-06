@@ -53,7 +53,3 @@ Para exemplificar, segue a imagem abaixo:
 Onde "LoginPage" é a página, "txtEmail" é um text-field desta página e o que está entre aspas duplas (") é o elemento em _xpath_. Assim se dá nas restantes, onde "ProjectPage" é uma página, "btnOpen" é um botão desta página e a referência para esse botão (para o Selenium) está mapeado entre as aspas duplas ("), que neste caso está vazio.
 
 ## Features/Cenários
-
-
-
-
