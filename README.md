@@ -58,6 +58,23 @@ Os cenários serão desenvolvidos utilizando a linguagem _Gherkin_ e utilizando 
 
 ![Cenário Exemplo](https://user-images.githubusercontent.com/76896958/161890299-0c1faafd-04c5-47e9-ab25-433b4bac1998.png)
 
-Neste caso, foi mostrado apenas um exemplo simples e com apenas um cenário. Para o arquivo completo: ![clique aqui.]()
+Neste cenário, nós temos as definições das tags _@All_, _@UC01_ e _@LoginUser_. Estas tags servem para referenciar qual "arquivo" será executado na classe _RunCucumberTest_ (mais a frente a exemplificação). Onde _@All_ estará contida em TODOS os testes, uma vez que chamando esta tag, é possível realizar todos os testes em sequência, sem ficar alternando-as. 
+
+Além disso, nota-se que os campos de cor ROXA são palavras reservadas pela linguagem. A definição em aspas duplas entre o sinal de menor e maior é uma variável, utilizada para exemplificar ('examples') e o destacado em laranja são 'strings' que serão enviadas para os métodos. Em resumo:
+
+- Feature: o nome a ser dado para o arquivo/funcionalidade (neste caso, o nome do UC foi utilizado)
+- Scenario/Scenario Outline: o nome do cenário (outline só será utilizado se houver 'examples')
+- Given, When, And, Then: apenas conectivos para o contexto atual + frase personalizada
+- Examples: os exemplos que serão testados (username deve ser 'test' na asserção do método)
+
+### Métodos Vinculados
+
+Nota-se então, que a linguagem natural deve ser referenciada de alguma forma. Com isso, os métodos devem estar "amarrados" com as tags do Cucumber seguido da linguagem natural. De tal forma, um exemplo simples:
+
+![Método 'closes the browser'](https://user-images.githubusercontent.com/76896958/161893639-98ecd9b6-6956-4f91-8b70-b622cb2ed0cb.png)
+
+Desta forma, a tag '@And' seguida do mesmo texto que há na feature, determinará qual método será executado. Com isso, se o criador do cenário escrever "the user closes the browser", este método será chamado. E assim se dá nas outras frases. Uma observação: não necessariamente a tag vinculada deve ser exatamente a mesma do cenário. Já o texto, ele deve ser exato.
+
+Neste caso, foi mostrado apenas um exemplo simples e com apenas um cenário. Para o arquivo completo: [clique aqui.](/src/test/resources/features/UC01.feature)
 
 
