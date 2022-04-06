@@ -1,0 +1,22 @@
+# The pages of the website will be mapped here.
+#
+# Make sure you're using single quotes ('') instead
+# of double quotes ("") inside the string.
+
+LoginPage:
+  txtEmail: "//*[@id='email']"
+  txtPassword: "//*[@id='password']"
+  btnLogin: "//*[@id='login-submit']"
+  txtEmailForgotPassword: "/html/body/div[1]/div/div/form/div[4]/a"
+  btnForgotPassword: ""
+  btnCloseForgotPassword: ""
+  btnSendPasswordForgotPassword: ""
+  btnCreateAccount: ""
+ProjectPage:
+  btnOpen: ""
+  btnEdit: ""
+  btnAddMember: ""
+  btnExportOverleaf: ""
+DashboardPage:
+  btnTeste: "..."
+
