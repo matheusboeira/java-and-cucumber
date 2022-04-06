@@ -1,5 +1,6 @@
 # Projeto de Testes - Silver Bullet
 
+<<<<<<< HEAD
 Antes de prosseguir para a execução dos testes, será necessário o uso de alguma IDE disponível no mercado. Desta forma, aconselha-se a utilizar uma das seguintes IDE's:
 
 - [Intellij IDEA](https://www.jetbrains.com/pt-br/idea/download); ou
@@ -10,6 +11,18 @@ Além disso, possuir o **Java JDK 11 ou superior** instalado na máquina.
 ### Intellij IDEA
 
 No Intellij IDEA, serão necessários dois plugins para conseguir realizar a execução dos testes, os quais são: _**Gherkin**_ e _**Cucumber for Java**_ que poderão ser instalados no _marketplace_ da ferramenta. Salvo para àqueles que possuem a versão Ultimate do Intellij, cujos plugins já vêm na própria instalação.
+=======
+Antes de prosseguir para a execução dos testes, será necessário o uso de alguma IDE disponível no mercado. Desta forma, aconselha-se a utilizar uma das seguintes IDE's: 
+
+- [Intellij IDEA](https://www.jetbrains.com/pt-br/idea/download); ou
+- [Eclipse](https://www.eclipse.org/downloads).
+  
+Além disso, possuir o **Java JDK 11 ou superior** instalado na máquina. 
+
+### Intellij IDEA
+
+No Intellij IDEA, serão necessários dois plugins para conseguir realizar a execução dos testes, os quais são: _**Gherkin**_ e _**Cucumber for Java**_ que poderão ser instalados no _marketplace_ da ferramenta. Salvo para àqueles que possuem a versão Ultimate do Intellij, cujos plugins já vêm na própria instalação. 
+>>>>>>> 505c54333b7461ab43c016e28b1cdd58b28d1509
 
 - Gherkin: para melhorar o suporte na criação dos cenários.
 - Cucumber for Java: para melhorar a assistência de código/suporte total e para habilitar um _**Run/Debug**_ exclusivo para a execução dos testes (_RunCucumberTest_, neste cenário).
@@ -20,6 +33,7 @@ Para uma melhor visualização:
 
 O plugin _**Cucumber for Groovy**_ é opcional, visto que não afeta diretamente ou indiretamente este cenário.
 
+<<<<<<< HEAD
 ### Eclipse
 
 No Eclipse, o único plugin necessário será o _**Cucumber Eclipse Plugin**_ que poderá ser instalado no _marketplace_ da ferramenta.
@@ -31,6 +45,19 @@ O projeto consiste em basicamente três passos:
 1. Mapear os elementos da página;
 1. Criar os cenários para os Casos de Uso; e
 1. Executar os testes através da classe _RunCucumberTest_.
+=======
+### Eclipse 
+
+No Eclipse, o único plugin necessário será o _**Cucumber Eclipse Plugin**_ que poderá ser instalado no _marketplace_ da ferramenta.
+  
+# Estrutura do Projeto
+
+O projeto consiste em basicamente três passos: 
+
+1. Mapear os elementos da página;
+1. Criar os cenários para os Casos de Uso; e
+1. Executar os testes através da classe _RunCucumberTest_. 
+>>>>>>> 505c54333b7461ab43c016e28b1cdd58b28d1509
 
 Ressaltando que estes poderão, em algum momento, possuir mais um passo: a criação de novos métodos vinculadas às novas frases da linguagem _Gherkin_.
 
