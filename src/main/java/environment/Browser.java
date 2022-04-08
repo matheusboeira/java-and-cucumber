@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Browser {
     private static final String CHROME_PATH = "src/main/resources/drivers/chromedriver.exe";
     private static final String FIREFOX_PATH = "src/main/resources/drivers/geckodriver.exe";
-    private static final String BROWSER = Property.getValue("browser");
+    private static final String BROWSER = Property.getValueOf("browser");
 
     private static String TASKKILL;
 
