@@ -43,7 +43,7 @@ public class CustomizedSteps {
     public synchronized void open() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.navigate().to(Property.get("url"));
+        driver.navigate().to(Property.getValue("url"));
     }
 
     /**
@@ -52,8 +52,8 @@ public class CustomizedSteps {
      */
     @When("^the user puts his credentials")
     public synchronized void credentials() {
-        putIn(Property.get("user"), "LoginPage.txtEmail");
-        putIn(Property.get("password"), "LoginPage.txtPassword");
+        putIn(Property.getValue("user"), "LoginPage.txtEmail");
+        putIn(Property.getValue("password"), "LoginPage.txtPassword");
     }
 
     /**
@@ -62,7 +62,7 @@ public class CustomizedSteps {
      */
     @When("^the user puts invalid credentials")
     public synchronized void invalidCredentials() {
-        putIn(Property.get("user"), "LoginPage.txtEmail");
+        putIn(Property.getValue("user"), "LoginPage.txtEmail");
         putIn("password_wrong", "LoginPage.txtPassword");
     }
 

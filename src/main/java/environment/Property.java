@@ -34,7 +34,7 @@ public class Property {
      * @param property the property to get the value
      * @return the property value
      */
-    public static String get(String property) {
+    public static String getValue(String property) {
         return properties.getProperty(property);
     }
 }
