@@ -15,7 +15,7 @@ import java.util.Properties;
  */
 public class Property {
     private static Properties properties;
-    private final static String path = "files\\project.properties";
+    private final static String PATH = "files\\project.properties";
 
     /**
      * Performs the reading of <b>project.properties</b> file
@@ -25,7 +25,7 @@ public class Property {
     public static void loadProperties() {
         properties = new Properties();
 
-        try (InputStream input = new FileInputStream(path)) {
+        try (InputStream input = new FileInputStream(PATH)) {
             properties.load(input);
         } catch (IOException e) {
             e.printStackTrace();
