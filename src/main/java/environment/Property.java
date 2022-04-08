@@ -1,5 +1,7 @@
 package environment;
 
+import environment.enums.PropertyOf;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,7 +36,7 @@ public class Property {
      * @param property the property to get the value
      * @return the property value
      */
-    public static String getValueOf(String property) {
-        return properties.getProperty(property);
+    public static String get(PropertyOf property) {
+        return properties.getProperty(property.toString().toLowerCase());
     }
 }

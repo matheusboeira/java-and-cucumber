@@ -3,6 +3,7 @@ package steps;
 import environment.Browser;
 import environment.Property;
 import environment.Repository;
+import environment.enums.PropertyOf;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -43,7 +44,7 @@ public class CustomizedSteps {
     public synchronized void open() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.navigate().to(Property.getValueOf("url"));
+        driver.navigate().to(Property.get(PropertyOf.URL));
     }
 
     /**
@@ -52,8 +53,8 @@ public class CustomizedSteps {
      */
     @When("^the user puts his credentials")
     public synchronized void credentials() {
-        putIn(Property.getValueOf("user"), "LoginPage.txtEmail");
-        putIn(Property.getValueOf("password"), "LoginPage.txtPassword");
+        putIn(Property.get(PropertyOf.USER), "LoginPage.txtEmail");
+        putIn(Property.get(PropertyOf.PASSWORD), "LoginPage.txtPassword");
     }
 
     /**
@@ -62,7 +63,7 @@ public class CustomizedSteps {
      */
     @When("^the user puts invalid credentials")
     public synchronized void invalidCredentials() {
-        putIn(Property.getValueOf("user"), "LoginPage.txtEmail");
+        putIn(Property.get(PropertyOf.USER), "LoginPage.txtEmail");
         putIn("password_wrong", "LoginPage.txtPassword");
     }
 
