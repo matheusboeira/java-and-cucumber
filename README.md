@@ -1,4 +1,4 @@
-# Projeto de Testes - Silver Bullet
+# Projeto de Testes
 
 Antes de prosseguir para a execução dos testes, será necessário o uso de alguma IDE disponível no mercado. Desta forma, aconselha-se a utilizar uma das seguintes IDE's: 
 
