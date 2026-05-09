@@ -22,7 +22,5 @@ Feature: Login User
     Then the system will send an error "<error>" on "LoginPage.lblError"
     And the user closes the browser
     Examples:
-      | error                               |
-      | the email or password is incorrect! |
-
-
+      | error                      |
+      | Usuário ou senha inválidos |

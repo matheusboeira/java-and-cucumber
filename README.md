@@ -4,8 +4,8 @@ Antes de prosseguir para a execução dos testes, será necessário o uso de alg
 
 - [Intellij IDEA](https://www.jetbrains.com/pt-br/idea/download); ou
 - [Eclipse](https://www.eclipse.org/downloads).
-  
-Além disso, possuir o **Java JDK 11 ou superior** instalado na máquina. 
+
+Além disso, possuir o **Java JDK 17** instalado na máquina. 
 
 ### Intellij IDEA
 

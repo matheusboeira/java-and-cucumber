@@ -14,6 +14,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -24,6 +26,7 @@ public class CustomizedSteps {
     @Before
     public static synchronized void setUp() {
         try {
+            Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
             driver = Browser.setDriver();
         } catch (NullPointerException e) {
             System.err.println(e.getMessage());

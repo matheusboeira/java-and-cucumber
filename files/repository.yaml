@@ -1,23 +1,22 @@
-# The pages of the website will be mapped here.
+# The website pages will be mapped here.
 #
-# Make sure you're using single quotes ('') instead
-# of double quotes ("") inside the string.
+# Make sure to use single quotes ('') instead
+# of double quotes ("") to make copying
+# XPath expressions easier.
 
 LoginPage:
-  txtEmail: "//*[@id='email']"
-  txtPassword: "//*[@id='password']"
-  btnLogin: "//*[@id='login-submit']"
-  txtEmailForgotPassword: "/html/body/div[1]/div/div/form/div[4]/a"
-  btnForgotPassword: ""
-  btnCloseForgotPassword: ""
-  btnSendPasswordForgotPassword: ""
-  btnCreateAccount: ""
-  lblError: ""
+  txtEmail: '//*[@name="emailOrUsername"]'
+  txtPassword: '//*[@name="password"]'
+  btnLogin: '//*[@type="submit"]'
+  txtEmailForgotPassword: ''
+  btnForgotPassword: ''
+  btnCloseForgotPassword: ''
+  btnSendPasswordForgotPassword: ''
+  btnCreateAccount: ''
+  lblError: '//*[@id="root"]/section'
 ProjectPage:
-  lblUsername: "/html/body/header/nav/div/ul/li[2]/a/span"
-  btnOpen: ""
-  btnEdit: ""
-  btnAddMember: ""
-  btnExportOverleaf: ""
-DashboardPage:
-  btnTeste: "..."
+  lblUsername: '//*[@id="root"]/div/div[1]/div/div[1]/aside/div[2]/div[1]/button/div/div[2]/div[1]'
+  btnOpen: ''
+  btnEdit: ''
+  btnAddMember: ''
+  btnExportOverleaf: ''
