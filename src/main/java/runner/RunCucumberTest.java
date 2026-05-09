@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "src/main/resources/features",
         glue = "steps",
-        tags = "@LoginUserScenery02"
+        tags = "@All"
 )
 public class RunCucumberTest {
     @BeforeClass

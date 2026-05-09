@@ -11,8 +11,8 @@ Feature: Login User
     Then the system verifies if the user matches "<username>" on "ProjectPage.lblUsername"
     And the user closes the browser
     Examples:
-      | username |
-      | test     |
+      | username  |
+      | Teste     |
 
   @LoginUserScenery02
   Scenario Outline: Login failure on Silver Bullet

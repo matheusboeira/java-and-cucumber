@@ -93,8 +93,8 @@ public class CustomizedSteps {
      */
     @Then("^the system verifies if the user matches \"(.*)\" on \"(.*)\"$")
     public synchronized void userMatches(String username, String element) {
-        String expected = getText(element);
-        assertEquals(expected, username);
+        waitTextEquals(element, username);
+        assertEquals(getText(element).strip(), username);
     }
 
     /**
@@ -132,13 +132,7 @@ public class CustomizedSteps {
 
     @Then("^the system will send an error \"(.*)\" on \"(.*)\"$")
     public synchronized void error(String error, String element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        wait.until(d -> {
-            String text = getText(element).strip();
-            return text.equals(error);
-        });
-
+        waitTextEquals(element, error);
         assertEquals(error, getText(element).strip());
     }
 
@@ -151,5 +145,22 @@ public class CustomizedSteps {
      */
     public synchronized String getText(String element) {
         return driver.findElement(By.xpath(Repository.getElement(element))).getText();
+    }
+
+    /**
+     * Waits until the element text matches the expected value.
+     *
+     * @param element identifier used by the {@code getText} method
+     * @param expectedText expected text value for validation
+     */
+    public void waitTextEquals(String element, String expectedText) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(d -> {
+            String text = getText(element).strip();
+
+            return !text.equalsIgnoreCase("Carregando...")
+                    && text.equals(expectedText);
+        });
     }
 }
