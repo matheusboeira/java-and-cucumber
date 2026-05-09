@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.logging.Level;
@@ -131,8 +132,14 @@ public class CustomizedSteps {
 
     @Then("^the system will send an error \"(.*)\" on \"(.*)\"$")
     public synchronized void error(String error, String element) {
-        String expected = getText(element).strip();
-        assertEquals(expected, error);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(d -> {
+            String text = getText(element).strip();
+            return text.equals(error);
+        });
+
+        assertEquals(error, getText(element).strip());
     }
 
     /**
